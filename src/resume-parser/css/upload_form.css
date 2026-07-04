@@ -1,0 +1,115 @@
+/* ============================================================
+   UploadForm Component — Additional Styles
+   ============================================================ */
+
+/* ---------- Upload Form Container ---------- */
+.upload-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  background: #f8fafc;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+/* ---------- File Input ---------- */
+.upload-form input[type="file"] {
+  flex: 1 1 240px;
+  padding: 0.6rem 0.75rem;
+  border: 2px dashed #94a3b8;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  font-size: 0.9rem;
+  color: #1e293b;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.upload-form input[type="file"]:hover {
+  border-color: #2563eb;
+  background: #f0f7ff;
+}
+
+.upload-form input[type="file"]:focus {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+/* ---------- File Meta Info ---------- */
+.file-meta {
+  font-size: 0.9rem;
+  color: #334155;
+  background: #e2e8f0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.file-meta strong {
+  color: #0f172a;
+}
+
+/* ---------- Inline Error ---------- */
+.inline-error {
+  color: #dc2626;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: #fee2e2;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.375rem;
+  border: 1px solid #fecaca;
+  width: 100%;
+}
+
+/* ---------- Submit Button ---------- */
+.upload-form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.upload-form button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: scale(1.02);
+}
+
+.upload-form button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.upload-form button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .upload-form {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+  .upload-form input[type="file"] {
+    flex: unset;
+    width: 100%;
+  }
+  .upload-form button {
+    width: 100%;
+    justify-content: center;
+  }
+  .file-meta {
+    text-align: center;
+    white-space: normal;
+  }
+}
